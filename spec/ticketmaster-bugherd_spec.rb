@@ -5,9 +5,15 @@ describe "TicketmasterBugherd" do
     @tm = TicketMaster.new(:bugherd, :email => 'user@bugherd.com', :password => '123456')
   end
 
-  it "should be able to initialize a ticketmaster object" do
-    @tm.should be_an_instance_of(TicketMaster)
-    @tm.should be_a_kind_of(TicketMaster::Provider::Bugherd)
+  context "Initialization and validation" do 
+    it "should be able to initialize a ticketmaster object" do
+      @tm.should be_an_instance_of(TicketMaster)
+      @tm.should be_a_kind_of(TicketMaster::Provider::Bugherd)
+    end
+
+    it "should validate the ticketmaster instance" do 
+      @tm.valid?.should be_true
+    end
   end
 
   context "Raise exceptions" do 

@@ -22,6 +22,9 @@ module TicketMaster::Provider
     end
     
     # declare needed overloaded methods here
+    def valid?
+      false
+    end
     
   end
 end

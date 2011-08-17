@@ -41,6 +41,8 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  activeresource (~> 3.0.0)
+  activesupport (~> 3.0.0)
   bundler (~> 1.0.0)
   jeweler (~> 1.6.4)
   rcov
