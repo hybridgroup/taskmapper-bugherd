@@ -11,10 +11,12 @@ describe "TicketMaster::Provider::Bugherd::Project" do
 
 
   context "Retreiving projects" do 
-    it "should return all projects" do 
+    it "should be able to return all projects" do 
       projects = @tm.projects
       projects.should be_an_instance_of(Array)
       projects.first.should be_an_instance_of(TicketMaster::Provider::Bugherd::Project)
     end
+
+    it "should be able to return all projects based on an array of id's" 
   end
 end
