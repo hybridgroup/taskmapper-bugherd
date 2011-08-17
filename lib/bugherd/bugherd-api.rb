@@ -29,4 +29,7 @@ module BugherdAPI
 
   class User < Base
   end
+
+  class Project < Base
+  end
 end

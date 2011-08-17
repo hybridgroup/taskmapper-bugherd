@@ -3,7 +3,7 @@ module TicketMaster::Provider
   module Bugherd
     include TicketMaster::Provider::Base
     #TICKET_API = Bugherd::Ticket # The class to access the api's tickets
-    #PROJECT_API = Bugherd::Project # The class to access the api's projects
+    PROJECT_API = BugherdAPI::Project # The class to access the api's projects
     
     # This is for cases when you want to instantiate using TicketMaster::Provider::Bugherd.new(auth)
     def self.new(auth = {})
