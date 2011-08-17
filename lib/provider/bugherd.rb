@@ -14,6 +14,10 @@ module TicketMaster::Provider
     # parameters to access the API
     def authorize(auth = {})
       @authentication ||= TicketMaster::Authenticator.new(auth)
+      auth = @authentication
+      if (auth.email.empty? || auth.password.empty?)
+        raise 
+      end
       # Set authentication parameters for whatever you're using to access the API
     end
     
