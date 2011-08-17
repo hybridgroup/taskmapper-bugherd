@@ -18,14 +18,15 @@ module TicketMaster::Provider
       if (auth.email.empty? || auth.password.empty?)
         raise "You must provide email and password for authentication"
       end
+      BugherdAPI.authenticate(auth.email, auth.password)
       # Set authentication parameters for whatever you're using to access the API
     end
     
     # declare needed overloaded methods here
     def valid?
-      false
+      BugherdAPI::User.find(:first).nil?
     end
-    
+
   end
 end
 
