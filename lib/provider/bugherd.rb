@@ -16,7 +16,7 @@ module TicketMaster::Provider
       @authentication ||= TicketMaster::Authenticator.new(auth)
       auth = @authentication
       if (auth.email.empty? || auth.password.empty?)
-        raise 
+        raise "You must provide email and password for authentication"
       end
       # Set authentication parameters for whatever you're using to access the API
     end

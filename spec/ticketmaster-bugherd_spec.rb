@@ -10,8 +10,15 @@ describe "TicketmasterBugherd" do
     @tm.should be_a_kind_of(TicketMaster::Provider::Bugherd)
   end
 
-  it "should raise an exception without email or password" do 
-     lambda { @tm = TicketMaster.new(:bugherd, :email => '', :password => '') }.should raise_error
+  context "Raise exceptions" do 
+    it "should raise an exception without email or password" do 
+      lambda { @tm = TicketMaster.new(:bugherd, :email => '', :password => '') }.should raise_error
+    end
+
+    it "should raise an exception with an user message" do 
+      lambda { @tm = TicketMaster.new(:bugherd, :email => '', :password => '')}.should raise_error("You must provide email and password for authentication")
+    end
   end
+
 
 end
