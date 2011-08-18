@@ -56,4 +56,3 @@ describe "TicketMaster::Provider::Bugherd::Project" do
     project.name.should == 'clutchapptest'
   end
 end
->>>>>>> 33a8af9f00e1529b0822b76c29ec2bd0b777a851
