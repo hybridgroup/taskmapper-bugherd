@@ -8,16 +8,16 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
       mock.get '/api_v1/projects/1458.xml', headers, fixture_for('1458', 'xml'), 200
       mock.get '/projects/1458/tasks.xml', headers, fixture_for('tasks', 'xml'), 200
     end
-    @project_id = 1458
+    @tm = TicketMaster.new(:bugherd, :email => 'george.rafael@gmail.com', :password => '123456')
+    @project = @tm.project(1458)
+    @klass = TicketMaster::Provider::Bugherd::Ticket
   end
 
   context "Loading all tickets" do 
     it "should be able to load all tickets" do 
-      @tm = TicketMaster.new(:bugherd, :email => 'george.rafael@gmail.com', :password => '123456')
-      project = @tm.project(1458)
-      tickets = project.tickets
+      tickets = @project.tickets
       tickets.should be_an_instance_of(Array)
-      tickets.first.should be_an_instance_of(TicketMaster::Provider::Bugherd::Ticket)
+      tickets.first.should be_an_instance_of(@klass)
     end
   end
 end
