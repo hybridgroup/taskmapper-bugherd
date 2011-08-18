@@ -4,7 +4,7 @@ module TicketMaster::Provider
     #
     #
     class Project < TicketMaster::Provider::Base::Project
-      #API = Bugherd::Project # The class to access the api's projects
+      API = BugherdAPI::Project # The class to access the api's projects
       # declare needed overloaded methods here
       
       
