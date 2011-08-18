@@ -11,7 +11,6 @@ module BugherdAPI
       @password = password
       self::Base.user = email
       self::Base.password = password
-      self::Base.site = 'http://www.bugherd.com/api_v1/'
     end
 
     def resources
@@ -21,6 +20,7 @@ module BugherdAPI
 
   class Base < ActiveResource::Base
     self.format = :xml
+    self.site = 'http://www.bugherd.com/api_v1/'
     def self.inherited(base)
       BugherdAPI.resources << base
       super
@@ -31,5 +31,9 @@ module BugherdAPI
   end
 
   class Project < Base
+  end
+
+  class Task < Base
+    self.site += '/projects/:project_id/'
   end
 end
