@@ -33,4 +33,11 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
       tickets.first.should be_an_instance_of(@klass)
     end
   end
+
+  context "Loading a single ticket" do 
+    it "should be able to load a single ticket based on id" do 
+      ticket = @project.ticket(4950)
+      ticket.should be_an_instance_of(@klass)
+    end
+  end
 end
