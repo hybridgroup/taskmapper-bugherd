@@ -26,5 +26,11 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
       tickets.should be_an_instance_of(Array)
       tickets.first.should be_an_instance_of(@klass)
     end
+
+    it "should be able to load all tickets based on attributes" do 
+      tickets = @project.tickets(:id => 4950)
+      tickets.should be_an_instance_of(Array)
+      tickets.first.should be_an_instance_of(@klass)
+    end
   end
 end
