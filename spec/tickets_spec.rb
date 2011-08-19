@@ -51,10 +51,10 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
     ticket.id.should == 4950
     ticket.status.should == 2
     ticket.priority.should be_nil
-    ticket.title.should == ''
-    ticket.resolution.should == ''
-    ticket.created_at.should == ''
-    ticket.updated_at.should == ''
+    ticket.title.should be_nil
+    ticket.resolution.should be_nil
+    ticket.created_at.should be_nil
+    ticket.updated_at.should be_nil
     ticket.description.should == ''
     ticket.assignee.should == ''
     ticket.requestor.should == ''
