@@ -15,6 +15,13 @@ module TicketMaster::Provider
         self[:priority_id]
       end
 
+      def assignee
+        user = BugherdAPI::User.find(:all).select do |user|
+          user.id == self[:assigned_to_id]
+        end.first
+        "#{user.name} #{user.surname}"
+      end
+
       def self.search(project_id, options = {}, limit = 1000)
         API.find(:all, :params => {:project_id => project_id}).collect do |task|
           self.new task

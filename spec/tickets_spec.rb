@@ -8,6 +8,7 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
       mock.get '/api_v1/projects/1458.xml', headers, fixture_for('/projects/1458', 'xml'), 200
       mock.get '/api_v1/projects/1458/tasks.xml', headers, fixture_for('tasks', 'xml'), 200
       mock.get '/api_v1/projects/1458/tasks/4950.xml',  headers, fixture_for('/tasks/4950', 'xml'), 200
+      mock.get '/api_v1/users.xml', headers, fixture_for('users', 'xml'), 200
     end
     @tm = TicketMaster.new(:bugherd, :email => 'george.rafael@gmail.com', :password => '123456')
     @project = @tm.project(1458)
@@ -56,7 +57,7 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
     ticket.created_at.should be_nil
     ticket.updated_at.should be_nil
     ticket.description.should == 'Now this one should be green not red'
-    ticket.assignee.should == ''
+    ticket.assignee.should == 'Rafael George'
     ticket.requestor.should == ''
     ticket.project_id.should == 1458
   end
