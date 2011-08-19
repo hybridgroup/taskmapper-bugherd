@@ -39,5 +39,25 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
       ticket = @project.ticket(4950)
       ticket.should be_an_instance_of(@klass)
     end
+
+    it "should be able to load a single ticket based on attributes" do 
+      ticket = @project.ticket(:id => 4950)
+      ticket.should be_an_instance_of(@klass)
+    end
+  end
+
+  it "should contain all fields for tickets" do 
+    ticket = @project.ticket(4950)
+    ticket.id.should == 4950
+    ticket.status.should == 2
+    ticket.priority.should == ''
+    ticket.title.should == ''
+    ticket.resolution.should == ''
+    ticket.created_at.should == ''
+    ticket.updated_at.should == ''
+    ticket.description.should == ''
+    ticket.assignee.should == ''
+    ticket.requestor.should == ''
+    ticket.project_id.should == 1458
   end
 end
