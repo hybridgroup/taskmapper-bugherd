@@ -8,7 +8,7 @@ describe "TicketMaster::Provider::Bugherd::Project" do
     headers = {'Authorization' => 'Basic dXNlckBlbWFpbC5jb206MDAwMA==', 'Accept' => 'application/xml'}
     ActiveResource::HttpMock.respond_to do |mock|
       mock.get '/api_v1/projects.xml', headers, fixture_for('projects', 'xml'), 200
-      mock.get '/api_v1/projects/1458.xml', headers, fixture_for('1458', 'xml'), 200
+      mock.get '/api_v1/projects/1458.xml', headers, fixture_for('/projects/1458', 'xml'), 200
     end
     @project_id = 1458
   end

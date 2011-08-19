@@ -19,10 +19,6 @@ module TicketMaster::Provider
         end
       end
 
-      def tickets(*options)
-        Ticket.find(self.id, options)
-      end
-
     end
   end
 end
