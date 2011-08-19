@@ -6,7 +6,7 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
     headers = { 'Authorization' => 'Basic Z2VvcmdlLnJhZmFlbEBnbWFpbC5jb206MTIzNDU2', 'Accept' => 'application/xml'}
     ActiveResource::HttpMock.respond_to do |mock| 
       mock.get '/api_v1/projects/1458.xml', headers, fixture_for('1458', 'xml'), 200
-      mock.get '/projects/1458/tasks.xml', headers, fixture_for('tasks', 'xml'), 200
+      mock.get '/api_v1/projects/1458/tasks.xml', headers, fixture_for('tasks', 'xml'), 200
     end
     @tm = TicketMaster.new(:bugherd, :email => 'george.rafael@gmail.com', :password => '123456')
     @project = @tm.project(1458)

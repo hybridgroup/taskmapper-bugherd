@@ -34,6 +34,6 @@ module BugherdAPI
   end
 
   class Task < Base
-    self.site += '/projects/:project_id/'
+    self.site += 'projects/:project_id/'
   end
 end
