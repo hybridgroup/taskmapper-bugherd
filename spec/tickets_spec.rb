@@ -55,7 +55,7 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
     ticket.resolution.should be_nil
     ticket.created_at.should be_nil
     ticket.updated_at.should be_nil
-    ticket.description.should == ''
+    ticket.description.should == 'Now this one should be green not red'
     ticket.assignee.should == ''
     ticket.requestor.should == ''
     ticket.project_id.should == 1458
