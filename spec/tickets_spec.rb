@@ -50,7 +50,7 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
   it "should contain all fields for tickets" do 
     ticket = @project.ticket(4950)
     ticket.id.should == 4950
-    ticket.status.should == 2
+    ticket.status.should == 'active'
     ticket.priority.should be_nil
     ticket.title.should be_nil
     ticket.resolution.should be_nil
