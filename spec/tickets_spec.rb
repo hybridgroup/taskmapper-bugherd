@@ -51,7 +51,7 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
     ticket = @project.ticket(4950)
     ticket.id.should == 4950
     ticket.status.should == 'active'
-    ticket.priority.should be_nil
+    ticket.priority.should == 'critical'
     ticket.title.should be_nil
     ticket.resolution.should be_nil
     ticket.created_at.should be_nil

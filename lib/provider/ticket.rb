@@ -6,6 +6,7 @@ module TicketMaster::Provider
     class Ticket < TicketMaster::Provider::Base::Ticket
       API = BugherdAPI::Task# The class to access the api's tickets
       STATUS = %w{new todo active declined fixed closed}
+      PRIORITY = %w{- critical important normal minor}
       # declare needed overloaded methods here
       
       def status
@@ -13,7 +14,7 @@ module TicketMaster::Provider
       end
 
       def priority
-        self[:priority_id]
+        PRIORITY[self[:priority_id]]
       end
 
       def assignee
