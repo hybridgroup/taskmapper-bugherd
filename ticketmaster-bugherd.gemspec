@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rafael George"]
   s.date = %q{2011-08-22}
-  s.description = %q{TODO: longer description of your gem}
+  s.description = %q{Ticketmaster provider for Bugherd}
   s.email = %q{george.rafael@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -42,13 +42,14 @@ Gem::Specification.new do |s|
     "spec/projects_spec.rb",
     "spec/spec_helper.rb",
     "spec/ticketmaster-bugherd_spec.rb",
-    "spec/tickets_spec.rb"
+    "spec/tickets_spec.rb",
+    "ticketmaster-bugherd.gemspec"
   ]
   s.homepage = %q{http://github.com/cored/ticketmaster-bugherd}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.1}
-  s.summary = %q{TODO: one-line summary of your gem}
+  s.summary = %q{Ticketmaster provider for Bugherd}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
