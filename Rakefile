@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "ticketmaster-bugherd"
   gem.homepage = "http://github.com/cored/ticketmaster-bugherd"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Ticketmaster provider for Bugherd}
+  gem.description = %Q{Ticketmaster provider for Bugherd}
   gem.email = "george.rafael@gmail.com"
   gem.authors = ["Rafael George"]
   # dependencies defined in Gemfile
