@@ -48,6 +48,7 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
     end
   end
 
+
   it "should contain all fields for tickets" do 
     ticket = @project.ticket(4950)
     ticket.id.should == 4950

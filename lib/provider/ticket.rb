@@ -34,6 +34,11 @@ module TicketMaster::Provider
         end
       end
 
+      def comments(*options)
+        warn "Bugherd API doesn't support comments"
+        []
+      end
+
     end
   end
 end
