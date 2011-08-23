@@ -3,13 +3,12 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "TicketMaster::Provider::Bugherd::Ticket" do 
 
   before(:each) do 
-    headers = { 'Authorization' => 'Basic Z2VvcmdlLnJhZmFlbEBnbWFpbC5jb206MTIzNDU2', 'Accept' => 'application/xml'}
     ActiveResource::HttpMock.respond_to do |mock| 
-      mock.get '/api_v1/projects/1458.xml', headers, fixture_for('/projects/1458', 'xml'), 200
-      mock.get '/api_v1/projects/1458/tasks.xml', headers, fixture_for('tasks', 'xml'), 200
-      mock.get '/api_v1/projects/1458/tasks/4950.xml',  headers, fixture_for('/tasks/4950', 'xml'), 200
-      mock.get '/api_v1/projects/1458/tasks/4949.xml',  headers, fixture_for('/tasks/4950', 'xml'), 200
-      mock.get '/api_v1/users.xml', headers, fixture_for('users', 'xml'), 200
+      mock.get '/api_v1/projects/1458.xml', {}, fixture_for('/projects/1458', 'xml'), 200
+      mock.get '/api_v1/projects/1458/tasks.xml', {}, fixture_for('tasks', 'xml'), 200
+      mock.get '/api_v1/projects/1458/tasks/4950.xml',  {}, fixture_for('/tasks/4950', 'xml'), 200
+      mock.get '/api_v1/projects/1458/tasks/4949.xml',  {}, fixture_for('/tasks/4950', 'xml'), 200
+      mock.get '/api_v1/users.xml', {}, fixture_for('users', 'xml'), 200
     end
     @tm = TicketMaster.new(:bugherd, :email => 'george.rafael@gmail.com', :password => '123456')
     @project = @tm.project(1458)
