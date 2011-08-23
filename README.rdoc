@@ -7,7 +7,25 @@ This is a provider for ticketmaster[http://ticketrb.com]. It provides interopera
 first we have to instance a new ticketmaster instance: 
  bugherd = TicketMaster.new(:bugherd, :email => 'user@email.com', :password => 'password')
 
-=== Retrieving projects
+=== Retreiving all projects
+ bugherd.projects
+
+=== Retrieving projects based on an array of id's
+ bugherd.projects([1,2,3])
+
+=== Retrieving projects based on attributes
+ bugherd.projects(:id => 1)
+
+=== Retrieving a single project
+ bugherd.project(1)
+
+=== Retrieving all tickets
+ project = bugherd.project(1)
+ project.tickets
+
+=== Retrieving tickets based on array of id's
+ project = bugherd.project(1)
+ project.tickets([1,2,3,4])
 
 == Contributing to ticketmaster-bugherd
  
