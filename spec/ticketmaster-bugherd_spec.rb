@@ -3,9 +3,8 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 describe "TicketmasterBugherd" do
   before(:each) do 
     @tm = TicketMaster.new(:bugherd, :email => 'user@bugherd.com', :password => '123456')
-    headers = {'Authorization' => 'Basic dXNlckBidWdoZXJkLmNvbToxMjM0NTY=', 'Accept' => 'application/xml'}
     ActiveResource::HttpMock.respond_to do |mock|
-      mock.get '/api_v1/users.xml', headers, fixture_for('users', 'xml'), 200
+      mock.get '/api_v1/users.xml', {}, fixture_for('users', 'xml'), 200
     end
   end
 
