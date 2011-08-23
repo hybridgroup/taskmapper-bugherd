@@ -1,6 +1,13 @@
 = ticketmaster-bugherd
 
-Description goes here.
+This is a provider for ticketmaster[http://ticketrb.com]. It provides interoperability with Bugherd[http://www.bugherd.com] through the ticketmaster gem.
+
+== Usage and Examples
+
+first we have to instance a new ticketmaster instance: 
+ bugherd = TicketMaster.new(:bugherd, :email => 'user@email.com', :password => 'password')
+
+=== Retrieving projects
 
 == Contributing to ticketmaster-bugherd
  
