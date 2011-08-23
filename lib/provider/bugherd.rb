@@ -2,7 +2,7 @@ module TicketMaster::Provider
   # This is the Bugherd Provider for ticketmaster
   module Bugherd
     include TicketMaster::Provider::Base
-    #TICKET_API = Bugherd::Ticket # The class to access the api's tickets
+    TICKET_API = Bugherd::Ticket # The class to access the api's tickets
     PROJECT_API = BugherdAPI::Project # The class to access the api's projects
     
     # This is for cases when you want to instantiate using TicketMaster::Provider::Bugherd.new(auth)
@@ -24,11 +24,7 @@ module TicketMaster::Provider
     
     # declare needed overloaded methods here
     def valid?
-      begin 
-        !BugherdAPI::User.find(:first).nil?
-      rescue
-        false
-      end
+      BugherdAPI::User.find(:all)
     end
 
   end
