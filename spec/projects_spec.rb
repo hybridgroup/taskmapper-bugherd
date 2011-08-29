@@ -2,12 +2,13 @@ require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "TicketMaster::Provider::Bugherd::Project" do 
   before(:each) do 
+    headers = {'Authorization' => 'Basic dXNlckBlbWFpbC5jb206MDAwMA==', 'Accept' => 'application/xml'}
     @tm = TicketMaster.new(:bugherd, :email => 'user@email.com',
                            :password => '0000')
     @klass = TicketMaster::Provider::Bugherd::Project
     ActiveResource::HttpMock.respond_to do |mock|
-      mock.get '/api_v1/projects.xml', {}, fixture_for('projects', 'xml'), 200
-      mock.get '/api_v1/projects/1458.xml', {}, fixture_for('/projects/1458', 'xml'), 200
+      mock.get '/api_v1/projects.xml', headers, fixture_for('projects', 'xml'), 200
+      mock.get '/api_v1/projects/1458.xml', headers, fixture_for('/projects/1458', 'xml'), 200
     end
     @project_id = 1458
   end

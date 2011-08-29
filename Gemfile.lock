@@ -9,7 +9,7 @@ GEM
       activemodel (= 3.0.9)
       activesupport (= 3.0.9)
     activesupport (3.0.9)
-    bugherd-api (0.0.1)
+    bugherd-api (0.0.3)
       activeresource
       activesupport
     builder (2.1.2)
@@ -45,7 +45,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
-  bugherd-api (~> 0.0.1)
+  bugherd-api (~> 0.0.3)
   bundler (~> 1.0.0)
   jeweler (~> 1.6.4)
   rcov

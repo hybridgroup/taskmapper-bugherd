@@ -6,9 +6,14 @@ module TicketMaster::Provider
     # versions of the ticket.
     #
     class Comment < TicketMaster::Provider::Base::Comment
-      #API = Bugherd::Comment # The class to access the api's comments
+      API = BugherdAPI::Comment # The class to access the api's comments
       # declare needed overloaded methods here
       
+      def self.search(project_id, ticket_id, options = {}, limit = 1000)
+        API.find(:all, :params => {:project_id => project_id, :task_id => ticket_id}).collect do |comment|
+          self.new comment
+        end
+      end
     end
   end
 end
