@@ -16,6 +16,10 @@ module TicketMaster::Provider
         "#{author.name} #{author.surname}" 
       end
 
+      def ticket_id
+        self.prefix_options[:task_id]
+      end
+
       def body
         self[:text]
       end
