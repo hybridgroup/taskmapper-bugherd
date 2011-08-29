@@ -34,5 +34,8 @@ describe "TicketMaster::Provider::Bugherd::Comment" do
     comment.should be_an_instance_of(@klass)
   end
 
-  it "should be able to retrieve a single comment based on attributes"
+  it "should be able to retrieve a single comment based on attributes" do 
+    comment = @ticket.comment(:id => 9760)
+    comment.should be_an_instance_of(@klass)
+  end
 end
