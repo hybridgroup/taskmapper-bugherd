@@ -20,6 +20,10 @@ module TicketMaster::Provider
         self.prefix_options[:task_id]
       end
 
+      def project_id
+        self.prefix_options[:project_id]
+      end
+
       def body
         self[:text]
       end

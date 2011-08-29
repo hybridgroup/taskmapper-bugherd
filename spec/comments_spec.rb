@@ -46,5 +46,6 @@ describe "TicketMaster::Provider::Bugherd::Comment" do
     comment.body.should == "I'm working on this already"
     comment.id.should == 9760
     comment.ticket_id.should == 4950
+    comment.project_id.should == 1458
   end
 end
