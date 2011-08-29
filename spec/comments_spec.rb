@@ -28,4 +28,9 @@ describe "TicketMaster::Provider::Bugherd::Comment" do
     comments.should be_an_instance_of(Array)
     comments.first.should be_an_instance_of(@klass)
   end
+
+  it "should be able to retrieve a single ticket based on id" do 
+    comment = @ticket.comment(9760)
+    comment.should be_an_instance_of(@klass)
+  end
 end
