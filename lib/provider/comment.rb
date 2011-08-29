@@ -16,6 +16,10 @@ module TicketMaster::Provider
         "#{author.name} #{author.surname}" 
       end
 
+      def body
+        self[:text]
+      end
+
       def self.search(project_id, ticket_id, options = {}, limit = 1000)
         API.find(:all, :params => {:project_id => project_id, :task_id => ticket_id}).collect do |comment|
           self.new comment

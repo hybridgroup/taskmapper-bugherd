@@ -43,5 +43,7 @@ describe "TicketMaster::Provider::Bugherd::Comment" do
   it "should have all valid fields for a comment" do 
     comment = @ticket.comment(9760)
     comment.author.should == 'Rafael George'
+    comment.body.should == "I'm working on this already"
+    comment.id.should == 9760
   end
 end
