@@ -9,6 +9,13 @@ module TicketMaster::Provider
       API = BugherdAPI::Comment # The class to access the api's comments
       # declare needed overloaded methods here
       
+      def author
+        author = BugherdAPI::User.find(:all).select do |user|
+          user.id == self[:user_id]
+        end.first
+        "#{author.name} #{author.surname}" 
+      end
+
       def self.search(project_id, ticket_id, options = {}, limit = 1000)
         API.find(:all, :params => {:project_id => project_id, :task_id => ticket_id}).collect do |comment|
           self.new comment

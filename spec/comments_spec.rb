@@ -11,6 +11,7 @@ describe "TicketMaster::Provider::Bugherd::Comment" do
       mock.get '/api_v1/projects/1458/tasks/4950.xml', headers, fixture_for('tasks/4950', 'xml'), 200
       mock.get '/api_v1/projects/1458/tasks/4950/comments.xml', headers, fixture_for('comments', 'xml'), 200
       mock.get '/api_v1/projects/1458/tasks/4950/comments/9760.xml', headers, fixture_for('comments/9760', 'xml'), 200
+      mock.get '/api_v1/users.xml', headers, fixture_for('users', 'xml'), 200
     end
     @project_id = 1458
     @ticket_id = 4950
@@ -37,5 +38,10 @@ describe "TicketMaster::Provider::Bugherd::Comment" do
   it "should be able to retrieve a single comment based on attributes" do 
     comment = @ticket.comment(:id => 9760)
     comment.should be_an_instance_of(@klass)
+  end
+
+  it "should have all valid fields for a comment" do 
+    comment = @ticket.comment(9760)
+    comment.author.should == 'Rafael George'
   end
 end
