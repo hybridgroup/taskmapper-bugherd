@@ -14,6 +14,10 @@ module TicketMaster::Provider
           self.new comment
         end
       end
+
+      def self.find_by_id(project_id, ticket_id, id)
+        self.new API.find(id, :params => {:project_id => project_id, :task_id => ticket_id})
+      end
     end
   end
 end
