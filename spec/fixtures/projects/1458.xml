@@ -3,12 +3,8 @@
   <id type="integer">1458</id>
   <name>clutchapptest</name>
   <devurl>http://clutchapptest.ticketmaster.com</devurl>
-  <users type="array">
-    <user>
-      <id type="integer">1798</id>
-      <email>george.rafael@gmail.com</email>
-      <name>Rafael</name>
-      <surname>George</surname>
-    </user>
-  </users>
+  <api-key>6f416a76-7ce1-463e-92d7-5f21f9b77dd9</api-key>
+  <created-at type="datetime">2011-08-17T20:07:07Z</created-at>
+  <updated-at type="datetime">2011-08-18T19:56:58Z</updated-at>
+  <is-active type="boolean">true</is-active>
 </project>

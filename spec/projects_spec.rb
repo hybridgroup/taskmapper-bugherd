@@ -54,5 +54,6 @@ describe "TicketMaster::Provider::Bugherd::Project" do
     project = @tm.project(@project_id)
     project.id.should == 1458
     project.name.should == 'clutchapptest'
+    project.created_at.should_not be_nil
   end
 end
