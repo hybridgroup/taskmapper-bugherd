@@ -14,7 +14,7 @@ module TicketMaster::Provider
       end
 
       def priority
-        PRIORITY[self[:priority_id]]
+        self[:priority_id].nil? ? "" : PRIORITY[self[:priority_id]]
       end
 
       def assignee

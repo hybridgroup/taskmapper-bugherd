@@ -3,14 +3,8 @@
   <id type="integer">4950</id>
   <description>Now this one should be green not red</description>
   <status-id type="integer">2</status-id>
-  <priority-id type="integer" nil="true">1</priority-id>
+  <priority-id type="integer" nil="true"></priority-id>
   <assigned-to-id type="integer">1798</assigned-to-id>
-  <comments type="array">
-    <comment>
-      <id type="integer">9760</id>
-      <created-at type="datetime">2011-08-18T19:57:56Z</created-at>
-      <text>I'm working on this already</text>
-      <user-id type="integer">1798</user-id>
-    </comment>
-  </comments>
+  <created-at type="datetime">2011-08-18T19:57:35Z</created-at>
+  <updated-at type="datetime">2011-08-18T19:57:40Z</updated-at>
 </task>
