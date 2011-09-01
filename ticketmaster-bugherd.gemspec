@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{ticketmaster-bugherd}
-  s.version = "0.0.4"
+  s.version = "0.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rafael George"]
-  s.date = %q{2011-08-31}
+  s.date = %q{2011-09-01}
   s.description = %q{Ticketmaster provider for Bugherd}
   s.email = %q{george.rafael@gmail.com}
   s.extra_rdoc_files = [
