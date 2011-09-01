@@ -24,7 +24,11 @@ module TicketMaster::Provider
     
     # declare needed overloaded methods here
     def valid?
-      BugherdAPI::User.find(:all)
+      begin
+        !BugherdAPI::User.find(:all).nil?
+      rescue
+        false
+      end
     end
 
   end
