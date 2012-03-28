@@ -21,8 +21,7 @@ module TicketMaster::Provider
               :assigned_to_id => object.assigned_to_id,
               :created_at => object.created_at,
               :updated_at => object.updated_at,
-              :description => object.description,
-              :project_id => object.project_id}
+              :description => object.description}
           else
             hash = object
           end
@@ -47,7 +46,8 @@ module TicketMaster::Provider
 
       def self.search(project_id, options = {}, limit = 1000)
         API.find(:all, :params => {:project_id => project_id}).collect do |task|
-          self.new task.merge!(:project_id => project_id)
+          task = task.merge!(:project_id => project_id)
+          self.new task
         end
       end
 

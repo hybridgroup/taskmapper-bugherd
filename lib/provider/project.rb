@@ -35,6 +35,10 @@ module TicketMaster::Provider
         end
       end
 
+      def ticket(*options)
+        Ticket.find(options.first)
+      end
+
     end
   end
 end

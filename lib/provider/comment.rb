@@ -30,7 +30,7 @@ module TicketMaster::Provider
 
       def self.search(project_id, ticket_id, options = {}, limit = 1000)
         API.find(:all, :params => {:project_id => project_id, :task_id => ticket_id}).collect do |comment|
-          self.new comment
+          self.new comment.merge!(:project_id => project_id, :task_id => ticket_id)
         end
       end
 
