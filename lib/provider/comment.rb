@@ -8,24 +8,31 @@ module TicketMaster::Provider
     class Comment < TicketMaster::Provider::Base::Comment
       API = BugherdAPI::Comment # The class to access the api's comments
       # declare needed overloaded methods here
+      #
       
+      def initialize(*object) 
+        if object.first
+          object = object.first
+          @system_data = {:client => object}
+          unless object.is_a? Hash
+             hash = {:id => object.id,
+                     :created_at => object.created_at,
+                     :body => object.text,
+                     :user_id => object.user_id,
+                     :ticket_id => object.prefix_options[:task_id],
+                     :project_id => object.prefix_options[:project_id]}
+          else
+            hash = object
+          end
+          super hash
+        end
+      end
+
       def author
         author = BugherdAPI::User.find(:all).select do |user|
           user.id == self[:user_id]
         end.first
         "#{author.name} #{author.surname}" 
-      end
-
-      def ticket_id
-        self.prefix_options[:task_id]
-      end
-
-      def project_id
-        self.prefix_options[:project_id]
-      end
-
-      def body
-        self[:text]
       end
 
       def self.search(project_id, ticket_id, options = {}, limit = 1000)

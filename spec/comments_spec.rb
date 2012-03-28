@@ -47,7 +47,7 @@ describe "TicketMaster::Provider::Bugherd::Comment" do
     comment.id.should == 9760
     comment.ticket_id.should == 4950
     comment.project_id.should == 1458
-    comment.updated_at.should_not be_nil
+    comment.updated_at.should be_nil
     comment.created_at.should_not be_nil
   end
 end

@@ -1,8 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projects type="array">
   <project>
+    <api-key>6f416a76-7ce1-463e-92d7-5f21f9b77dd9</api-key>
+    <created-at type="datetime">2011-08-17T20:07:07Z</created-at>
+    <devurl>http://clutchapptest.ticketmaster.com</devurl>
     <id type="integer">1458</id>
     <name>clutchapptest</name>
-    <devurl>http://clutchapptest.ticketmaster.com</devurl>
+    <updated-at type="datetime">2012-02-27T21:50:39Z</updated-at>
+    <is-active type="boolean">true</is-active>
+  </project>
+  <project>
+    <api-key nil="true"></api-key>
+    <created-at type="datetime">2011-08-18T18:18:26Z</created-at>
+    <devurl>yeah.com</devurl>
+    <id type="integer">1487</id>
+    <name>testing</name>
+    <updated-at type="datetime">2012-02-27T21:50:28Z</updated-at>
+    <is-active type="boolean">true</is-active>
   </project>
 </projects>
