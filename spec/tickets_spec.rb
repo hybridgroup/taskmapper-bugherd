@@ -1,7 +1,6 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
 describe "TicketMaster::Provider::Bugherd::Ticket" do 
-
   before(:each) do 
     headers = {'Authorization' => 'Basic Z2VvcmdlLnJhZmFlbEBnbWFpbC5jb206MTIzNDU2', 'Accept' => 'application/xml'}
     ActiveResource::HttpMock.respond_to do |mock| 
@@ -47,7 +46,6 @@ describe "TicketMaster::Provider::Bugherd::Ticket" do
       ticket.should be_an_instance_of(@klass)
     end
   end
-
 
   it "should contain all fields for tickets" do 
     ticket = @project.ticket(4950)

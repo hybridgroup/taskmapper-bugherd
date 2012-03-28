@@ -18,12 +18,15 @@ module TicketMaster::Provider
             hash = {:id => object.id,
                     :status_id => object.status_id,
                     :priority_id => object.priority_id,
-                    :assigned_to_id => object.assigned_to_id}
+                    :assigned_to_id => object.assigned_to_id,
+                    :created_at => object.created_at,
+                    :updated_at => object.updated_at}
           else
             hash = object
           end
         end
       end
+
       def status
         STATUS[self[:status_id]]
       end
