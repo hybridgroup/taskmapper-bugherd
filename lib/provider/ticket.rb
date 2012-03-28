@@ -9,6 +9,21 @@ module TicketMaster::Provider
       PRIORITY = %w{- critical important normal minor}
       # declare needed overloaded methods here
       
+
+      def initialize(*object)
+        if object.first
+          object = object.first
+          @system_data = {:client => object}
+          unless object.is_a? Hash
+            hash = {:id => object.id,
+                    :status_id => object.status_id,
+                    :priority_id => object.priority_id,
+                    :assigned_to_id => object.assigned_to_id}
+          else
+            hash = object
+          end
+        end
+      end
       def status
         STATUS[self[:status_id]]
       end

@@ -1,17 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tasks type="array">
   <task>
-    <id type="integer">4950</id>
-    <description>Now this one should be green not red</description>
-    <status-id type="integer">2</status-id>
-    <priority-id type="integer" nil="true"></priority-id>
     <assigned-to-id type="integer">1798</assigned-to-id>
+    <created-at type="datetime">2011-08-18T19:56:58Z</created-at>
+    <description>This button should use another color</description>
+    <id type="integer">4949</id>
+    <local-task-id type="integer">1</local-task-id>
+    <priority-id type="integer" nil="true"></priority-id>
+    <status-id type="integer">2</status-id>
+    <updated-at type="datetime">2011-08-18T19:57:11Z</updated-at>
+    <url>/mail/#inbox</url>
   </task>
   <task>
-    <id type="integer">4949</id>
-    <description>This button should use another color</description>
-    <status-id type="integer">2</status-id>
-    <priority-id type="integer" nil="true"></priority-id>
     <assigned-to-id type="integer">1798</assigned-to-id>
+    <created-at type="datetime">2011-08-18T19:57:35Z</created-at>
+    <description>Now this one should be green not red</description>
+    <id type="integer">4950</id>
+    <local-task-id type="integer">2</local-task-id>
+    <priority-id type="integer" nil="true"></priority-id>
+    <status-id type="integer">2</status-id>
+    <updated-at type="datetime">2011-08-18T19:57:40Z</updated-at>
+    <url>/mail/#inbox</url>
+  </task>
+  <task>
+    <assigned-to-id type="integer" nil="true"></assigned-to-id>
+    <created-at type="datetime">2011-08-19T19:26:15Z</created-at>
+    <description>Should return nil withou asignee
+</description>
+    <id type="integer">5019</id>
+    <local-task-id type="integer">3</local-task-id>
+    <priority-id type="integer" nil="true"></priority-id>
+    <status-id type="integer">0</status-id>
+    <updated-at type="datetime">2011-08-19T19:26:15Z</updated-at>
+    <url>/mail/?ui=2&amp;shva=1#inbox</url>
   </task>
 </tasks>
