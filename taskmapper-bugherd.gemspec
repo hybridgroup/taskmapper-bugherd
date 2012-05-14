@@ -4,13 +4,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{ticketmaster-bugherd}
+  s.name = %q{taskmapper-bugherd}
   s.version = "0.0.5"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Rafael George"]
   s.date = %q{2011-09-01}
-  s.description = %q{Ticketmaster provider for Bugherd}
+  s.description = %q{TaskMapper provider for Bugherd}
   s.email = %q{george.rafael@gmail.com}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
     "lib/provider/comment.rb",
     "lib/provider/project.rb",
     "lib/provider/ticket.rb",
-    "lib/ticketmaster-bugherd.rb",
+    "lib/taskmapper-bugherd.rb",
     "request.xml",
     "spec/comments_spec.rb",
     "spec/fixtures/comments.xml",
@@ -42,28 +42,28 @@ Gem::Specification.new do |s|
     "spec/fixtures/users.xml",
     "spec/projects_spec.rb",
     "spec/spec_helper.rb",
-    "spec/ticketmaster-bugherd_spec.rb",
+    "spec/taskmapper-bugherd_spec.rb",
     "spec/tickets_spec.rb",
-    "ticketmaster-bugherd.gemspec"
+    "taskmapper-bugherd.gemspec"
   ]
-  s.homepage = %q{http://github.com/cored/ticketmaster-bugherd}
+  s.homepage = %q{http://github.com/cored/taskmapper-bugherd}
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.6.1}
-  s.summary = %q{Ticketmaster provider for Bugherd}
+  s.summary = %q{TaskMapper provider for Bugherd}
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<ticketmaster>, ["~> 0.6.0"])
+      s.add_runtime_dependency(%q<taskmapper>, ["~> 0.6.0"])
       s.add_runtime_dependency(%q<bugherd-api>, ["~> 0.0.3"])
       s.add_development_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
       s.add_development_dependency(%q<rcov>, [">= 0"])
     else
-      s.add_dependency(%q<ticketmaster>, ["~> 0.6.0"])
+      s.add_dependency(%q<taskmapper>, ["~> 0.6.0"])
       s.add_dependency(%q<bugherd-api>, ["~> 0.0.3"])
       s.add_dependency(%q<rspec>, ["~> 2.3.0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -71,7 +71,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rcov>, [">= 0"])
     end
   else
-    s.add_dependency(%q<ticketmaster>, ["~> 0.6.0"])
+    s.add_dependency(%q<taskmapper>, ["~> 0.6.0"])
     s.add_dependency(%q<bugherd-api>, ["~> 0.0.3"])
     s.add_dependency(%q<rspec>, ["~> 2.3.0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])

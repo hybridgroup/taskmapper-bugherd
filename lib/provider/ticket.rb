@@ -1,9 +1,9 @@
-module TicketMaster::Provider
+module TaskMapper::Provider
   module Bugherd
-    # Ticket class for ticketmaster-bugherd
+    # Ticket class for taskmapper-bugherd
     #
 
-    class Ticket < TicketMaster::Provider::Base::Ticket
+    class Ticket < TaskMapper::Provider::Base::Ticket
       API = BugherdAPI::Task# The class to access the api's tickets
       STATUS = %w{new todo active declined fixed closed}
       PRIORITY = %w{- critical important normal minor}

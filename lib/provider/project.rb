@@ -1,9 +1,9 @@
-module TicketMaster::Provider
+module TaskMapper::Provider
   module Bugherd
-    # Project class for ticketmaster-bugherd
+    # Project class for taskmapper-bugherd
     #
     #
-    class Project < TicketMaster::Provider::Base::Project
+    class Project < TaskMapper::Provider::Base::Project
       API = BugherdAPI::Project # The class to access the api's projects
       # declare needed overloaded methods here
       

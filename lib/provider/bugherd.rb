@@ -1,19 +1,19 @@
-module TicketMaster::Provider
-  # This is the Bugherd Provider for ticketmaster
+module TaskMapper::Provider
+  # This is the Bugherd Provider for taskmapper
   module Bugherd
-    include TicketMaster::Provider::Base
+    include TaskMapper::Provider::Base
     TICKET_API = Bugherd::Ticket # The class to access the api's tickets
     PROJECT_API = BugherdAPI::Project # The class to access the api's projects
     
-    # This is for cases when you want to instantiate using TicketMaster::Provider::Bugherd.new(auth)
+    # This is for cases when you want to instantiate using TaskMapper::Provider::Bugherd.new(auth)
     def self.new(auth = {})
-      TicketMaster.new(:bugherd, auth)
+      TaskMapper.new(:bugherd, auth)
     end
     
     # Providers must define an authorize method. This is used to initialize and set authentication
     # parameters to access the API
     def authorize(auth = {})
-      @authentication ||= TicketMaster::Authenticator.new(auth)
+      @authentication ||= TaskMapper::Authenticator.new(auth)
       auth = @authentication
       if (auth.email.empty? || auth.password.empty?)
         raise "You must provide email and password for authentication"

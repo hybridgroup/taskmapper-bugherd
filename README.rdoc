@@ -1,11 +1,11 @@
-= ticketmaster-bugherd
+= taskmapper-bugherd
 
-This is a provider for ticketmaster[http://ticketrb.com]. It provides interoperability with Bugherd[http://www.bugherd.com] through the ticketmaster gem.
+This is a provider for taskmapper[http://ticketrb.com]. It provides interoperability with Bugherd[http://www.bugherd.com] through the taskmapper gem.
 
 == Usage and Examples
 
-first we have to instance a new ticketmaster instance: 
- bugherd = TicketMaster.new(:bugherd, :email => 'user@email.com', :password => 'password')
+first we have to instance a new taskmapper instance: 
+ bugherd = TaskMapper.new(:bugherd, :email => 'user@email.com', :password => 'password')
 
 === Retreiving all projects
  bugherd.projects
@@ -27,7 +27,7 @@ first we have to instance a new ticketmaster instance:
  project = bugherd.project(1)
  project.tickets([1,2,3,4])
 
-== Contributing to ticketmaster-bugherd
+== Contributing to taskmapper-bugherd
  
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it

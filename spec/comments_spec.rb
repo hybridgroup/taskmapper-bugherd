@@ -1,10 +1,10 @@
 require File.expand_path(File.dirname(__FILE__) + '/spec_helper')
 
-describe "TicketMaster::Provider::Bugherd::Comment" do 
+describe TaskMapper::Provider::Bugherd::Comment do 
   before(:each) do 
-    @tm = TicketMaster.new(:bugherd, :email => 'user@email.com',
+    @tm = TaskMapper.new(:bugherd, :email => 'user@email.com',
                            :password => '0000')
-    @klass = TicketMaster::Provider::Bugherd::Comment
+    @klass = TaskMapper::Provider::Bugherd::Comment
     headers = {'Authorization' => 'Basic dXNlckBlbWFpbC5jb206MDAwMA==', 'Accept' => 'application/xml'}
     ActiveResource::HttpMock.respond_to do |mock|
       mock.get '/api_v1/projects/1458.xml', headers, fixture_for('projects/1458', 'xml'), 200

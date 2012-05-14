@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "ticketmaster-bugherd"
-  gem.homepage = "http://github.com/cored/ticketmaster-bugherd"
+  gem.name = "taskmapper-bugherd"
+  gem.homepage = "http://github.com/cored/taskmapper-bugherd"
   gem.license = "MIT"
-  gem.summary = %Q{Ticketmaster provider for Bugherd}
-  gem.description = %Q{Ticketmaster provider for Bugherd}
+  gem.summary = %Q{TaskMapper provider for Bugherd}
+  gem.description = %Q{TaskMapper provider for Bugherd}
   gem.email = "george.rafael@gmail.com"
   gem.authors = ["Rafael George"]
   # dependencies defined in Gemfile
@@ -43,7 +43,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "ticketmaster-bugherd #{version}"
+  rdoc.title = "taskmapper-bugherd #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
