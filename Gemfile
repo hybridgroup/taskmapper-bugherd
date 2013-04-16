@@ -3,8 +3,8 @@ source "http://rubygems.org"
 # Example:
 #   gem "activesupport", ">= 2.3.5"
 
-gem "taskmapper", "~> 0.8"
-gem "bugherd-api", "~> 0.0"
+gem "taskmapper"
+gem "bugherd-api"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 group :development do
